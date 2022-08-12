@@ -1,0 +1,22 @@
+
+[core]
+  excludesFile = ~/.gitignore_global
+
+[fetch]
+  prune = true # Delete local branches that have been removed from remote on fetch/pull
+
+[format]
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+
+[init]
+  defaultBranch = main
+
+[mergetool]
+  keepBackup = false
+
+[pull]
+  rebase = true
+
+[user]
+  name = Tinh Truong
+  email = hi@tinhtruong.me
