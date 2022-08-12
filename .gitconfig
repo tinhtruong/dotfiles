@@ -1,6 +1,8 @@
 
 [core]
   excludesFile = ~/.gitignore_global
+  attributesfile = ~/.gitattributes_global
+  autocrlf = input # convert CRLF to LF on commit as we don't want to store CRLF in the repo
 
 [fetch]
   prune = true # Delete local branches that have been removed from remote on fetch/pull
