@@ -8,8 +8,8 @@
     sort = -committerdate
 [core]
     # Use custom `.gitignore` and `.gitattributes`.
-    excludesFile = ~/.gitignore
-    attributesfile = ~/.gitattributes
+    #excludesFile = ~/.gitignore
+    #attributesfile = ~/.gitattributes
   
     # convert CRLF to LF on commit as we don't want to store CRLF in the repo
     autocrlf = input 
