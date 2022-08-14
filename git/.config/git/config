@@ -10,17 +10,17 @@
     # Use custom `.gitignore` and `.gitattributes`.
     #excludesFile = ~/.gitignore
     #attributesfile = ~/.gitattributes
-  
+
     # convert CRLF to LF on commit as we don't want to store CRLF in the repo
-    autocrlf = input 
-  
+    autocrlf = input
+
     # Make `git rebase` safer on macOS.
     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
     trustctime = false
 
 [fetch]
     # Delete local branches that have been removed from remote on fetch/pull
-    prune = true 
+    prune = true
 
 [format]
     pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
