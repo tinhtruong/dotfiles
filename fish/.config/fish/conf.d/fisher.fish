@@ -11,6 +11,6 @@ set -gx fish_function_path $fisher_path/functions $fish_function_path
 # Load all the fisher plugin's completion
 set -gx fish_complete_path $fisher_path/completions $fish_complete_path
 
-for plugin_conf in $fisher_path/*.fish;
+for plugin_conf in $fisher_path/conf.d/*.fish
     source $plugin_conf
 end
