@@ -10,6 +10,7 @@ alias cat "bat"
 # Git aliases
 alias gci "git commit -m"
 alias gca "git commit -am"
+alias gad "git add"
 alias gsh "git push"
 alias gll "git pull"
 alias gst "git status"
