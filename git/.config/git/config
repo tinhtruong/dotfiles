@@ -7,8 +7,7 @@
     # Show most recently changed branches first.
     sort = -committerdate
 [core]
-    # Use custom `.gitignore` and `.gitattributes`.
-    #excludesFile = ~/.gitignore
+    # Use `.gitattributes`. Be careful with existing repo with binary files already checked in as it may re-write history!
     #attributesfile = ~/.gitattributes
 
     # convert CRLF to LF on commit as we don't want to store CRLF in the repo
@@ -17,6 +16,7 @@
     # Make `git rebase` safer on macOS.
     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
     trustctime = false
+
 	editor = micro
 
 [fetch]
