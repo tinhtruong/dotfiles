@@ -2,7 +2,7 @@
 
 # SSH will execute this script to determine if it should use the configuration of
 # a `Match` block (see id_other_bitbucket/config and id_tinhtruong_bitbucket/config) to connect to a host.
-# The script will grep the SSH process which connect to git@bitbucket.org and then further
+# The script will look for the SSH process which connect to git@bitbucket.org and then further
 # grep for the username specified by the first argument passed in ($1), for example `tinhtruong`
 
 # An example of matched process details as following:
