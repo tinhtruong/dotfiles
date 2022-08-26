@@ -24,7 +24,7 @@
     prune = true
 
 [format]
-    pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+    pretty = format:%C(yellow)%h%C(green)%d%Creset  %C(brightblue)%s  %C(magenta)%an  %C(brightblack)(%ar - %aD)  %Creset
 
 [help]
     # Automatically correct and execute mistyped commands.
