@@ -24,7 +24,7 @@
     prune = true
 
 [format]
-    pretty = format:%C(yellow)%h%C(green)%d%Creset  %C(brightblue)%s  %C(magenta)%an  %C(brightblack)(%ar - %aD)  %Creset
+    pretty = format:%C(dim yellow)%h%Creset%C(brightgreen)%d%Creset %C(dim brightblack)- %Creset%C(brightblue)%s  %C(magenta)%an  %C(dim brightblack)(%ar - %ad)  %Creset
 
 [help]
     # Automatically correct and execute mistyped commands.
@@ -32,6 +32,9 @@
 
 [init]
     defaultBranch = main
+
+[log]
+  date = format:%x, %I:%M %p
 
 [mergetool]
     keepBackup = false
