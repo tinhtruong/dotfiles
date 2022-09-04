@@ -1,0 +1,6 @@
+{
+    "workbench.enableExperiments": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 250,
+    "editor.minimap.enabled": false,
+}
