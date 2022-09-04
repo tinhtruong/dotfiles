@@ -1,6 +1,28 @@
 {
-    "workbench.enableExperiments": false,
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave.enabled": true,
+    "editor.formatOnPaste.enabled": true,
+    "editor.fontSize": 12,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "addMissingImports": true
+    },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 250,
-    "editor.minimap.enabled": false,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "workbench.editor.enablePreview": false,
+    "workbench.enableExperiments": false
 }
