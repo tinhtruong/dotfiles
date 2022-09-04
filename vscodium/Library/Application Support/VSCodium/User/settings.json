@@ -2,7 +2,9 @@
     "editor.minimap.enabled": false,
     "editor.formatOnSave.enabled": true,
     "editor.formatOnPaste.enabled": true,
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
         "addMissingImports": true
@@ -23,6 +25,9 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
     },
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.lineHeight": 1.2,
     "workbench.editor.enablePreview": false,
     "workbench.enableExperiments": false
 }
