@@ -51,7 +51,7 @@
 
 [user]
     name = Tinh Truong
-    email = hi@tinhtruong.me
+    email = code@tinhtruong.me
 
 [url "ssh://git@bitbucket.org/"]
     insteadOf = https://bitbucket.org/
