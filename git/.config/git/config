@@ -52,8 +52,11 @@
 [user]
     name = Tinh Truong
     email = code@tinhtruong.me
+	signingkey = 457FDBBDFE653190
 
 [url "ssh://git@bitbucket.org/"]
     insteadOf = https://bitbucket.org/
 [diff]
 	external = difft
+[commit]
+	gpgsign = true
