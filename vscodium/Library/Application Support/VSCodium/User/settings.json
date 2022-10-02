@@ -18,5 +18,8 @@
     "terminal.integrated.lineHeight": 1.2,
     "window.zoomLevel": 0.5,
     "workbench.editor.enablePreview": false,
-    "workbench.enableExperiments": false
+    "workbench.enableExperiments": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
