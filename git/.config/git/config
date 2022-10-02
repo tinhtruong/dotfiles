@@ -6,6 +6,10 @@
 [branch]
     # Show most recently changed branches first.
     sort = -committerdate
+
+[commit]
+    gpgsign = true
+
 [core]
     # Use `.gitattributes`. Be careful with existing repo with binary files already checked in as it may re-write history!
     #attributesfile = ~/.gitattributes
@@ -18,6 +22,9 @@
     trustctime = false
 
 	editor = micro
+
+[diff]
+    external = difft
 
 [fetch]
     # Delete local branches that have been removed from remote on fetch/pull
@@ -34,7 +41,7 @@
     defaultBranch = main
 
 [log]
-  date = format:%x, %I:%M %p
+    date = format:%x, %I:%M %p
 
 [mergetool]
     keepBackup = false
@@ -56,7 +63,3 @@
 
 [url "ssh://git@bitbucket.org/"]
     insteadOf = https://bitbucket.org/
-[diff]
-	external = difft
-[commit]
-	gpgsign = true
