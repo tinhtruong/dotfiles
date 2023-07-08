@@ -1,7 +1,7 @@
 
 # GNU bash 5.1+ and coreutils integration integration
 if status is-interactive
-  # Only add homebrew bin to path if exists
+    # Only add coreutils bin to path if exists
     if test -d /usr/local/opt/coreutils
         set -gp fish_user_paths /usr/local/opt/coreutils/libexec/gnubin
     end
