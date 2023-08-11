@@ -56,14 +56,20 @@
     followTags = true
     autoSetupRemote = true
 
-[user]
-    name = Tinh Truong
-    email = code@tinhtruong.me
-	signingkey = 457FDBBDFE653190
+[includeIf "hasconfig:remote.*.url:git@github.com:tinhtruong/**"]
+    path = tinhtruong.inc
+
+[includeIf "hasconfig:remote.*.url:git@bitbucket.org:tinhtruong/**"]
+    path = tinhtruong.inc
+
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:papercut*/**"]
+    path = papercut.inc
+
+[includeIf "hasconfig:remote.*.url:git@bitbucket.org:papercutsoftware/**"]
+    path = papercut.inc
 
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
 
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
-
