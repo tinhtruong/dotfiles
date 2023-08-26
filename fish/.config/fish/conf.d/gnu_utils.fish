@@ -15,4 +15,11 @@ if status is-interactive
     if test -d /opt/homebrew/opt/findutils
         set -gp fish_user_paths /opt/homebrew/opt/findutils/libexec/gnubin
     end
+    # Only add grep bin to path if exists
+    if test -d /usr/local/opt/grep
+        set -gp fish_user_paths /usr/local/opt/grep/libexec/gnubin
+    end
+    if test -d /opt/homebrew/opt/grep
+        set -gp fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin
+    end
 end
