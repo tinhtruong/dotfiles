@@ -11,13 +11,14 @@ end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{tf,hcl}]
+[*.{tf,hcl,yml,yaml}]
 indent_size = 2
 
 [*.bat]
 end_of_line = crlf
 
 [*.md]
+max_line_length = off
 trim_trailing_whitespace = false
 
 [*.tsv]
