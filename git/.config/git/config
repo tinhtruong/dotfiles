@@ -56,16 +56,22 @@
     followTags = true
     autoSetupRemote = true
 
-[includeIf "hasconfig:remote.*.url:git@github.com:tinhtruong/**"]
+# [includeIf "hasconfig:remote.*.url:git@github.com:tinhtruong/**"]
+#     path = tinhtruong.inc
+
+# [includeIf "hasconfig:remote.*.url:git@bitbucket.org:tinhtruong/**"]
+#     path = tinhtruong.inc
+
+[includeIf "gitdir:~/Code"]
     path = tinhtruong.inc
 
-[includeIf "hasconfig:remote.*.url:git@bitbucket.org:tinhtruong/**"]
+[includeIf "gitdir:~/Development/my-projects/"]
     path = tinhtruong.inc
 
 [includeIf "hasconfig:remote.*.url:git@gitlab.com:papercut*/**"]
     path = papercut.inc
 
-[includeIf "hasconfig:remote.*.url:git@bitbucket.org:papercutsoftware/**"]
+[includeIf "gitdir:~/Development/pc-projects/"]
     path = papercut.inc
 
 [url "ssh://git@bitbucket.org/"]
