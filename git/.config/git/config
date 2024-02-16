@@ -23,6 +23,9 @@
 
 	editor = micro
 
+    # Global gitignore file
+    excludeFiles = ./ignore
+
 [diff]
     external = difft
 
@@ -43,11 +46,20 @@
 [log]
     date = format:%x, %I:%M %p
 
+[merge]
+    conflictstyle = zdiff3
+
 [mergetool]
     keepBackup = false
 
 [pull]
     rebase = true
+
+[rebase]
+    autostash = true
+
+[rerere]
+    enabled = true
 
 [push]
     # https://git-scm.com/docs/git-config#git-config-pushdefault
@@ -56,22 +68,13 @@
     followTags = true
     autoSetupRemote = true
 
-# [includeIf "hasconfig:remote.*.url:git@github.com:tinhtruong/**"]
-#     path = tinhtruong.inc
+[includeIf "gitdir:~/Code/**"]
+    path = ~/.config/git/tinhtruong.inc
 
-# [includeIf "hasconfig:remote.*.url:git@bitbucket.org:tinhtruong/**"]
-#     path = tinhtruong.inc
+[includeIf "gitdir:~/Development/my-projects/**"]
+    path = ~/.config/git/tinhtruong.inc
 
-[includeIf "gitdir:~/Code"]
-    path = tinhtruong.inc
-
-[includeIf "gitdir:~/Development/my-projects/"]
-    path = tinhtruong.inc
-
-[includeIf "hasconfig:remote.*.url:git@gitlab.com:papercut*/**"]
-    path = papercut.inc
-
-[includeIf "gitdir:~/Development/pc-projects/"]
+[includeIf "gitdir:~/Development/pc-projects/**"]
     path = papercut.inc
 
 [url "ssh://git@bitbucket.org/"]
