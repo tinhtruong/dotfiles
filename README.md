@@ -1,4 +1,4 @@
-# Update symlinsk using GNU Stow
+# Update symlinks using GNU Stow
 ```shell
 stow --verbose --target=$HOME --restow */
 ```
