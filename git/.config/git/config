@@ -1,4 +1,8 @@
 
+[alias]
+    # Git checkout to a branch using fzf to search for branches
+    cob = !git checkout $(git branch | fzf)
+    
 [apply]
     # Detect whitespace errors when applying a patch.
     whitespace = fix
