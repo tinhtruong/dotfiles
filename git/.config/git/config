@@ -78,7 +78,7 @@
     path = ~/.config/git/personal.inc
 
 [includeIf "gitdir:~/Development/pc-projects/**"]
-    path = ~/.config/git/papercut.inc
+    path = ~/.config/git/work.inc
 
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
