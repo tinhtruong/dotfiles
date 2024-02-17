@@ -71,6 +71,9 @@
 [includeIf "gitdir:~/Code/**"]
     path = ~/.config/git/personal.inc
 
+[includeIf "gitdir:~/Development/dotfiles/**"]
+    path = ~/.config/git/personal.inc
+
 [includeIf "gitdir:~/Development/my-projects/**"]
     path = ~/.config/git/personal.inc
 
