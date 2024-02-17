@@ -24,7 +24,7 @@
 	editor = micro
 
     # Global gitignore file
-    excludeFiles = ./ignore
+    excludeFiles = ~/.config/git/ignore
 
 [diff]
     external = difft
@@ -69,13 +69,13 @@
     autoSetupRemote = true
 
 [includeIf "gitdir:~/Code/**"]
-    path = ~/.config/git/tinhtruong.inc
+    path = ~/.config/git/personal.inc
 
 [includeIf "gitdir:~/Development/my-projects/**"]
-    path = ~/.config/git/tinhtruong.inc
+    path = ~/.config/git/personal.inc
 
 [includeIf "gitdir:~/Development/pc-projects/**"]
-    path = papercut.inc
+    path = ~/.config/git/papercut.inc
 
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
