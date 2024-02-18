@@ -1,5 +1,5 @@
 
-# GNU bash 5.1+ and GNU tools (coreutils, findutils) integration integration
+# GNU bash 5.1+ and GNU tools (coreutils, findutils) integration
 if status is-interactive
     # Only add coreutils bin to path if exists
     if test -d /usr/local/opt/coreutils
