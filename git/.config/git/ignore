@@ -74,6 +74,7 @@ cache/
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+*.iml
 
 # AWS User-specific
 .idea/**/aws.xml
