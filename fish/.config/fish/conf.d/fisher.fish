@@ -17,11 +17,11 @@ if status is-interactive
       for plugin_conf in $fisher_path/conf.d/*.fish
           source $plugin_conf
       end
-      
+
       for plugin_func in $fisher_path/functions/*.fish
           source $plugin_func
       end
-      
+
       for plugin_completions in $fisher_path/completions/*.fish
           source $plugin_completions
       end
