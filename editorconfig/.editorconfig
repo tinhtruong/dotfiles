@@ -11,7 +11,7 @@ end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{tf,hcl,yml,yaml}]
+[*.{tf,hcl,yml,yaml,ts}]
 indent_size = 2
 
 [*.bat]
