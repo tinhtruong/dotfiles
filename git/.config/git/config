@@ -2,7 +2,7 @@
 [alias]
     # Git checkout to a branch using fzf to search for branches
     cob = !git checkout $(git branch | fzf)
-    
+
 [apply]
     # Detect whitespace errors when applying a patch.
     whitespace = fix
@@ -89,3 +89,6 @@
 
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+
+[url "ssh://git@gitlab.com/"]
+	insteadOf = https://gitlab.com/
