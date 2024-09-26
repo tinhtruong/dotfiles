@@ -3,6 +3,21 @@
     # Git checkout to a branch using fzf to search for branches
     cob = !git checkout $(git branch | fzf)
 
+    # Select branch to switch to, preview shows last commit
+    cb = "!git branch --all | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --preview 'git show --color=always {-1}' | sed 's/remotes\\/origin\\///g' | xargs -r git checkout"
+
+    # Choose stash to apply, preview shows diff
+    stash-choose = "!git stash list | fzf -0 --preview 'git show --pretty=oneline --color=always --patch \"$(echo {} | cut -d: -f1)\"' | cut -d: -f1 | xargs -r git stash pop"
+
+    # Delete a stash, preview shows diff
+    stash-delete = "!git stash list | fzf -0 --preview 'git show --pretty=oneline --color=always --patch \"$(echo {} | cut -d: -f1)\"' | cut -d: -f1 | xargs -r git stash drop"
+
+    # Delete branches, use <tab> to select multiple, force delete via Db. Preview shows last commit
+    branch-delete = "!git branch | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --multi --preview 'git show --color=always {-1}' | xargs -r git branch --delete"
+
+    # Push current local branch to remote with the same name and track it
+    push-remote = "!CURRENT=$(git symbolic-ref --short HEAD) && git push -u origin $CURRENT:$CURRENT"
+
 [apply]
     # Detect whitespace errors when applying a patch.
     whitespace = fix
