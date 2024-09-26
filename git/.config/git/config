@@ -51,8 +51,17 @@
     # Global gitignore file
     excludeFiles = ~/.config/git/ignore
 
-; [diff]
-;     external = difft
+    pager = delta
+
+[delta]
+    navigate = true
+    side-by-side = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[diff]
+    colorMoved = default
 
 [fetch]
     # Delete local branches that have been removed from remote on fetch/pull
