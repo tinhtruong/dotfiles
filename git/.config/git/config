@@ -18,6 +18,12 @@
     # Push current local branch to remote with the same name and track it
     push-remote = "!CURRENT=$(git symbolic-ref --short HEAD) && git push -u origin $CURRENT:$CURRENT"
 
+    # Pick commit hash
+    pick-hash = "!git log --abbrev-commit --color=always | fzf --ansi  | awk '{print $1}' | pbcopy"
+
+    # Git add using fzf with preview diff
+    add-fzf = "!git ls-files --deleted --modified --other --exclude-standard | fzf -0 -m --preview 'git diff --color=always {-1}' | xargs -r git add"
+
 [apply]
     # Detect whitespace errors when applying a patch.
     whitespace = fix
@@ -45,8 +51,8 @@
     # Global gitignore file
     excludeFiles = ~/.config/git/ignore
 
-[diff]
-    external = difft
+; [diff]
+;     external = difft
 
 [fetch]
     # Delete local branches that have been removed from remote on fetch/pull
