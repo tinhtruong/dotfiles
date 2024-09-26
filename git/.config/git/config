@@ -72,15 +72,19 @@
     followTags = true
     autoSetupRemote = true
 
+# Code path on personal machine
 [includeIf "gitdir:~/Code/**"]
     path = ~/.config/git/personal.inc
 
+# Code path on work machine
 [includeIf "gitdir:~/Development/dotfiles/**"]
     path = ~/.config/git/personal.inc
 
+# Code path on work machine
 [includeIf "gitdir:~/Development/my-projects/**"]
     path = ~/.config/git/personal.inc
 
+# Code path on work machine
 [includeIf "gitdir:~/Development/pc-projects/**"]
     path = ~/.config/git/work.inc
 
