@@ -21,7 +21,8 @@
     # Push current local branch to remote with the same name and track it
     push-remote = "!CURRENT=$(git symbolic-ref --short HEAD) && git push -u origin $CURRENT:$CURRENT"
 
-    # Pick commit hash
+    # Pick commit hash and copy it into clipboard, only work on macOS as pbcopy
+    # Need to implement pbcopy on linux https://superuser.com/questions/288320/whats-like-osxs-pbcopy-for-linux
     pick-hash = "!git log --abbrev-commit --color=always | fzf --ansi  | awk '{print $1}' | pbcopy"
 
     # Git add using fzf with preview diff
