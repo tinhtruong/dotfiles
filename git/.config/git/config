@@ -1,7 +1,7 @@
 
 [alias]
     # Git checkout to a branch using fzf to search for branches
-    cob = !git checkout $(git branch | fzf)
+    checkout-fzf = !git checkout $(git branch | fzf)
 
     # Select branch to switch to, preview shows last commit
     cb = "!git branch --all | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --preview 'git show --color=always {-1}' | sed 's/remotes\\/origin\\///g' | xargs -r git checkout"
