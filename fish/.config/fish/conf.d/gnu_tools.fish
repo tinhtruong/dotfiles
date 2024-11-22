@@ -22,4 +22,11 @@ if status is-interactive
     if test -d /opt/homebrew/opt/grep
         set -gp fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin
     end
+    # Only add sed bin to path if exists
+    if test -d /usr/local/opt/sed
+        set -gp fish_user_paths /usr/local/opt/gnu-sed/libexec/gnubin
+    end
+    if test -d /opt/homebrew/opt/sed
+        set -gp fish_user_paths /opt/homebrew/opt/gnu-sed/libexec/gnubin
+    end
 end
