@@ -18,6 +18,9 @@
     # Create a new local branch
     branch-new = "!git checkout -b"
 
+    # Delete local tag
+    tag-delete = "!git tag --delete tagname"
+
     # Push current local branch to remote with the same name and track it
     push-remote = "!CURRENT=$(git symbolic-ref --short HEAD) && git push -u origin $CURRENT:$CURRENT"
 
