@@ -1,4 +1,4 @@
 [user]
     name = Tinh Truong
     email = tinh.truong@papercut.com
-	signingkey = 457FDBBDFE653190
+	signingkey = 8D6900871A6312DD
