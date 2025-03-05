@@ -97,7 +97,7 @@
     date = format:%x, %I:%M %p
 
 [merge]
-    conflictstyle = zdiff3
+    conflictStyle = zdiff3
 
 [mergetool]
     keepBackup = false
