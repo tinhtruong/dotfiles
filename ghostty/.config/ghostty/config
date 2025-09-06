@@ -2,5 +2,8 @@ theme = xcodedarkhc
 font-family = RobotoMono Nerd Font Mono
 font-size = 14
 
+background-opacity = 0.85
+background-blur = true
+
 # https://ghostty.org/docs/help/terminfo#sudo
 shell-integration-features = sudo
