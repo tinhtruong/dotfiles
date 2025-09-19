@@ -4,16 +4,16 @@
 	checkout-fzf = !git checkout $(git branch | fzf)
 
     # Select branch to switch to, preview shows last commit
-	cb = !git branch --all | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --preview 'git show --color
+	cb = !git branch --all | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --preview 'git show --color'
 
     # Choose stash to apply, preview shows diff
-	stash-choose = !git stash list | fzf -0 --preview 'git show --pretty
+	stash-choose = !git stash list | fzf -0 --preview 'git show --pretty'
 
     # Delete a stash, preview shows diff
-	stash-delete = !git stash list | fzf -0 --preview 'git show --pretty
+	stash-delete = !git stash list | fzf -0 --preview 'git show --pretty'
 
     # Delete branches, use <tab> to select multiple, force delete via Db. Preview shows last commit
-	branch-delete = !git branch | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --multi --preview 'git show --color
+	branch-delete = !git branch | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --multi --preview 'git show --color'
 
     # Create a new local branch
 	branch-new = !git checkout -b
@@ -29,7 +29,7 @@
 	pick-hash = !git log --abbrev-commit --color
 
     # Git add using fzf with preview diff
-	add-fzf = !git ls-files --deleted --modified --other --exclude-standard | fzf -0 -m --preview 'git diff --color
+	add-fzf = !git ls-files --deleted --modified --other --exclude-standard | fzf -0 -m --preview 'git diff --color'
 
 [apply]
     # Detect whitespace errors when applying a patch.
