@@ -1,8 +1,10 @@
 # Set up command aliases
 
 # https://github.com/eza-community/eza
-alias ls "eza"
-alias tree "eza --tree"
+if command -sq eza
+    alias ls "eza"
+    alias tree "eza --tree"
+end
 
 # https://github.com/sharkdp/bat
 alias cat "bat"
