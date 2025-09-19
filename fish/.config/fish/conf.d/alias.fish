@@ -1,13 +1,15 @@
 # Set up command aliases
 
 # https://github.com/eza-community/eza
-if command -sq eza
+if command -sq eza # check if eza exists
     alias ls "eza"
     alias tree "eza --tree"
 end
 
 # https://github.com/sharkdp/bat
-alias cat "bat"
+if command -sq bat # check if bat exists
+    alias cat "bat"
+end 
 
 # Git aliases
 alias gci "git commit -m"
