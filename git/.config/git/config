@@ -1,35 +1,35 @@
 
 [alias]
     # Git checkout to a branch using fzf to search for branches
-    checkout-fzf = !git checkout $(git branch | fzf)
+	checkout-fzf = !git checkout $(git branch | fzf)
 
     # Select branch to switch to, preview shows last commit
-    cb = "!git branch --all | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --preview 'git show --color=always {-1}' | sed 's/remotes\\/origin\\///g' | xargs -r git checkout"
+	cb = !git branch --all | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --preview 'git show --color
 
     # Choose stash to apply, preview shows diff
-    stash-choose = "!git stash list | fzf -0 --preview 'git show --pretty=oneline --color=always --patch \"$(echo {} | cut -d: -f1)\"' | cut -d: -f1 | xargs -r git stash pop"
+	stash-choose = !git stash list | fzf -0 --preview 'git show --pretty
 
     # Delete a stash, preview shows diff
-    stash-delete = "!git stash list | fzf -0 --preview 'git show --pretty=oneline --color=always --patch \"$(echo {} | cut -d: -f1)\"' | cut -d: -f1 | xargs -r git stash drop"
+	stash-delete = !git stash list | fzf -0 --preview 'git show --pretty
 
     # Delete branches, use <tab> to select multiple, force delete via Db. Preview shows last commit
-    branch-delete = "!git branch | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --multi --preview 'git show --color=always {-1}' | xargs -r git branch --delete"
+	branch-delete = !git branch | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --multi --preview 'git show --color
 
     # Create a new local branch
-    branch-new = "!git checkout -b"
+	branch-new = !git checkout -b
 
     # Delete local tag
-    tag-delete = "!git tag --delete tagname"
+	tag-delete = !git tag --delete tagname
 
     # Push current local branch to remote with the same name and track it
-    push-remote = "!CURRENT=$(git symbolic-ref --short HEAD) && git push -u origin $CURRENT:$CURRENT"
+	push-remote = !CURRENT
 
     # Pick commit hash and copy it into clipboard, only work on macOS as pbcopy
     # Need to implement pbcopy on linux https://superuser.com/questions/288320/whats-like-osxs-pbcopy-for-linux
-    pick-hash = "!git log --abbrev-commit --color=always | fzf --ansi  | awk '{print $1}' | pbcopy"
+	pick-hash = !git log --abbrev-commit --color
 
     # Git add using fzf with preview diff
-    add-fzf = "!git ls-files --deleted --modified --other --exclude-standard | fzf -0 -m --preview 'git diff --color=always {-1}' | xargs -r git add"
+	add-fzf = !git ls-files --deleted --modified --other --exclude-standard | fzf -0 -m --preview 'git diff --color
 
 [apply]
     # Detect whitespace errors when applying a patch.
@@ -103,7 +103,7 @@
     keepBackup = false
 
 [pull]
-    rebase = true
+	rebase = true
 
 [rebase]
     autoSquash = true
@@ -133,6 +133,10 @@
 
 # Code path on work machine
 [includeIf "gitdir:~/Development/my-projects/**"]
+    path = ~/.config/git/personal.inc
+
+# Code path inside DevContainer of IntelliJ
+[includeIf "gitdir:/IdeaProjects/**"]
     path = ~/.config/git/personal.inc
 
 # Code path on work machine
