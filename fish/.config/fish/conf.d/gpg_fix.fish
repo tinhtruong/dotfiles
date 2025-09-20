@@ -1,3 +1,5 @@
 if status is-interactive
-    export GPG_TTY=$(tty)
+    if test -n (command -v gpg) # check if gpg exists
+        export GPG_TTY=$(tty)
+    end
 end
