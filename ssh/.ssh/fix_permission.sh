@@ -17,5 +17,5 @@ find ~/.ssh/ -name "*.pub" -exec chmod 644 {} +
 # Relax permissions for known_hosts
 chmod 644 ~/.ssh/known_hosts
 
-# Make the script executable
+# Make all scripts executable
 find ~/.ssh/ -name "*.sh" -exec chmod 744 {} +
