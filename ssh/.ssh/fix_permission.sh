@@ -18,4 +18,4 @@ find ~/.ssh/ -name "*.pub" -exec chmod 644 {} +
 chmod 644 ~/.ssh/known_hosts
 
 # Make the script executable
-chmod +x ~/.ssh/fix_permission.sh
+find ~/.ssh/ -name "*.sh" -exec chmod 744 {} +
