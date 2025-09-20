@@ -14,7 +14,7 @@ insert_final_newline = true
 [*.{tf,hcl,yml,yaml,ts,tsx}]
 indent_size = 2
 
-[*.bat]
+[*.{cmd,bat}]
 end_of_line = crlf
 
 [*.md]
