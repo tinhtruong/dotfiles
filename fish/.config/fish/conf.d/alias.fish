@@ -1,13 +1,15 @@
 # Set up command aliases
 
 # https://github.com/eza-community/eza
-if test -n (command -v eza) # check if eza exists
+command -v eza
+if test $status -eq 0 # check if eza exists
     alias ls "eza"
     alias tree "eza --tree"
 end
 
 # https://github.com/sharkdp/bat
-if test -n (command -v bat) # check if bat exists
+command -v bat
+if test $status -eq 0 # check if bat exists
     alias cat "bat"
 end
 
