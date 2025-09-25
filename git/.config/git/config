@@ -22,7 +22,7 @@
 	tag-delete = !git tag --delete tagname
 
     # Push current local branch to remote with the same name and track it
-	push-remote = !CURRENT
+	push-remote = !git push -u origin HEAD
 
     # Pick commit hash and copy it into clipboard, only work on macOS as it has pbcopy
     # Need to implement pbcopy on linux https://superuser.com/questions/288320/whats-like-osxs-pbcopy-for-linux

@@ -28,6 +28,7 @@ alias grb "git rebase"
 alias gcl "git clean -fd"
 alias grs "git reset"
 alias glg "git log"
+alias gpr "git push-remote"
 
 # https://wiki.archlinux.org/title/Kitty#Terminal_issues_with_SSH
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
