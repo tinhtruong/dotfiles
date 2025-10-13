@@ -140,7 +140,7 @@
     path = ~/.config/git/personal.inc
 
 # Code path inside DevContainer CLI
-[includeIf "gitdir:/workspace/**"]
+[includeIf "gitdir:/workspaces/"]
     path = ~/.config/git/personal.inc
 
 
