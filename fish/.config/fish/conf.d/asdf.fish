@@ -15,5 +15,7 @@ if status is-interactive
 
     # Setup ASDF completion, have to hard-code homebrew prefix as brew --prefix fail due to homebrew in not in the
     # Fish PATH when this piece of code run
-    /opt/homebrew/bin/asdf completion fish > ~/.config/fish/completions/asdf.fish
+    if test -d /opt/homebrew
+        /opt/homebrew/bin/asdf completion fish > ~/.config/fish/completions/asdf.fish
+    end
 end
