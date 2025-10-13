@@ -139,6 +139,11 @@
 [includeIf "gitdir:/IdeaProjects/**"]
     path = ~/.config/git/personal.inc
 
+# Code path inside DevContainer CLI
+[includeIf "gitdir:/workspace/**"]
+    path = ~/.config/git/personal.inc
+
+
 # Code path on work machine
 [includeIf "gitdir:~/Development/pc-projects/**"]
     path = ~/.config/git/work.inc
