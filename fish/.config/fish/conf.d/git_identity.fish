@@ -1,6 +1,16 @@
 if status is-interactive
-    # Setup Git identity only when we are not running inside a container
-    if not test -f /.dockerenv
+    # If running inside Docker container, setup SSH_AUTH_SOCK env var so that the container will forward to
+    # the host machine via mounted socket file at /ssh-agent.sock
+    if test -f /.dockerenv
+        # Check if ssh-agent is not running
+        if not set -q SSH_AUTH_SOCK
+            # Check if mounted socket file exists
+            if test -S /ssh-agent.sock
+                set -gx SSH_AUTH_SOCK '/ssh-agent.sock'
+            end
+        end
+    else
+        # Setup Git identity only when we are not running inside a container
         # Start ssh-agent if not running
         # ssh-agent will set the SSH_AUTH_SOCK env var when it is running
         if not set -q SSH_AUTH_SOCK
