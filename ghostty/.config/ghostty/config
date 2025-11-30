@@ -6,4 +6,4 @@ background-opacity = 0.85
 background-blur = true
 
 # https://ghostty.org/docs/help/terminfo#sudo
-shell-integration-features = sudo
+shell-integration-features = sudo, ssh-terminfo, ssh-env
